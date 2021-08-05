@@ -1,0 +1,10 @@
+{
+  "data": {
+    "type": "DriverInformation",
+    "attributes": {
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "drivers_license_number": "12345678"
+    }
+  }
+}

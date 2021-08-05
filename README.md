@@ -1,5 +1,11 @@
 # Driver information rails app
 
+### Getting Started
+1. Please branch off of master and push your code regularly.
+2. When complete, reach out to `ted@cover.com` and `firas@cover.com`
+3. Please timebox yourself to a maximum of 2 hours.
+4. Read the notes below, if you have any questions please reach out to `firas@cover.com` and `ted@cover.com` via email.
+
 ### Notes
 1. This rails application is API only, meaning there will be no rendering of any views.
 2. The clients of this application only accept JSON
@@ -9,7 +15,6 @@
 6. Each branch of logic introduced should be thoroughly tested
 7. Third party services are unreliable, we should make sure each branch of logic has appropriate error handling.
 8. This app uses ruby 2.7.1, and rails 6.1.4
-9. If you have any questions, please reach out to `firas@cover.com` and `ted@cover.com` via email.
 
 ### Business Requirements
 1. Given a `first_name`, `last_name`, and `drivers_license_number`, I need to make a request to a driver information service and return back the result to the client.

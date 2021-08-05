@@ -50,7 +50,7 @@
       "first_name": "Jane",
       "last_name": "Doe",
       "drivers_license_number": "00000000",
-      "number_of_incidients": "0",
+      "number_of_incidents": "0",
       "number_of_vehicles": "0"
     }
   }

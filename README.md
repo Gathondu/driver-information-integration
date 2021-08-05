@@ -21,6 +21,7 @@
 2. The requests to the driver information service are expensive, so we should persist the results in the database after requesting a report.
 3. If we've already ordered a report for a given set of information, we should load it from the database instead of ordering a new report.
 4. Drivers licenses must be 8 digits long, and may only contain characters between 0-9. For an example, `12345678` is valid, `a1234567` is not.
+5. Build ontop of the existing methods found in [this controller](https://github.com/ted/driver-information-integration/blob/master/app/controllers/driver_informations_controller.rb) to add the ability to create driver information records, as well as the ability to view previously created driving information records given the uuid.
 
 ### Third party services
 1. There is an endpoint available at: `POST https://cover-driver-information-mock.herokuapp.com/reports` which will return driver information, it accepts a payload structured like:

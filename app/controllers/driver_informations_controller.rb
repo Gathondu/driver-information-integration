@@ -1,10 +1,10 @@
-require 'json'
 class DriverInformationsController < ApplicationController
 
   def create
-    first_name = params['first_name']
-    last_name = params['last_name']
-    license_number = params['drivers_license_number']
+    @params = params['driver_information']['data']['attributes']
+    first_name = @params['first_name']
+    last_name = @params['last_name']
+    license_number = @params['drivers_license_number']
 
     @record = Information.find_by(license_number: license_number)
     if @record
@@ -20,7 +20,7 @@ class DriverInformationsController < ApplicationController
         @info['number_of_incidents'],
         @info['number_of_vehicles']
       )
-      render jsonapi: @new_record
+      render jsonapi: @new_record, status: :created
     end
   end
 

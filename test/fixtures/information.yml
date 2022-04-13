@@ -1,17 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  api_id: MyString
-  first_name: MyString
-  last_name: MyString
-  license_number: MyString
-  incidents: MyString
-  vehicles: MyString
+  api_id: testuuid1
+  first_name: testf1
+  last_name: testf2
+  license_number: 23456780
+  incidents: 3
+  vehicles: 4
 
 two:
-  api_id: MyString
-  first_name: MyString
-  last_name: MyString
-  license_number: MyString
-  incidents: MyString
-  vehicles: MyString
+  api_id: testuuid2
+  first_name: testf3
+  last_name: testf4
+  license_number: 34567893
+  incidents: 2
+  vehicles: 6

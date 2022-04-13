@@ -9,10 +9,11 @@ module DriverInformation
       stubs.post(ENV['api_url']) do [
         200,
         { 'Content-Type': 'application/json' },
-        '"{\"data\":{\"id\":\"cf5ed317235bed5a927f020b75ce8294\",\"type\":\"DriverInformation\",\"attributes\":{\"first_name\":\"Jane\",\"last_name\":\"Doe\",\"drivers_license_number\":\"00002052\",\"number_of_incidents\":\"2\",\"number_of_vehicles\":\"5\"}}}"'
+        "{\"data\":{\"id\":\"cf5ed317235bed5a927f020b75ce8294\",\"type\":\"DriverInformation\",\"attributes\":{\"first_name\":\"Jane\",\"last_name\":\"Doe\",\"drivers_license_number\":\"00002052\",\"number_of_incidents\":\"2\",\"number_of_vehicles\":\"5\"}}}"
       ]
       end
-      byebug
+      conn = client(stubs)
+      # FIX faraday stubs for this test
     end
 
     private

@@ -15,6 +15,10 @@ class DriverInformationsControllerTest < ActionDispatch::IntegrationTest
 
     post driver_informations_url, params: payload, headers: { 'Accept' => 'application/vnd.api+json', 'Content-Type' => 'application/json' }
 
+    json = JSON.parse(response.body)['data']['attributes']
+    assert_equal JSON.parse(payload)['data']['attributes']['first_name'], json['first_name']
+    assert_equal JSON.parse(payload)['data']['attributes']['last_name'], json['last_name']
+    assert_equal JSON.parse(payload)['data']['attributes']['drivers_license_number'], json['license_number']
     assert_response :success
   end
 

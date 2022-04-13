@@ -9,6 +9,6 @@ class InformationTest < ActiveSupport::TestCase
       info.license_number = 'license_number'
     end
 
-    assert_raises(ActiveRecord::RecordInvalid) { info.save! }
+    refute info.valid?
   end
 end

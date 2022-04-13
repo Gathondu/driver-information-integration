@@ -16,7 +16,7 @@ module DriverInformation
         req.body = body
       end
       raise 'Driver details not found' unless response.status == 200
-      JSON.parse(response.body)
+      JSON.parse(response.body)['data']
     end
 
 

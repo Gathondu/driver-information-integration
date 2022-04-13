@@ -8,7 +8,7 @@ class DriverInformationsController < ApplicationController
 
     @record = Information.find_by(license_number: license_number)
     if @record
-      render json: @record
+      render jsonapi: @record
     else
       @data = DriverInformation::Requestor.call(first_name, last_name, license_number)
       @info = @data['attributes']
@@ -20,13 +20,13 @@ class DriverInformationsController < ApplicationController
         @info['number_of_incidents'],
         @info['number_of_vehicles']
       )
-      render json: @new_record
+      render jsonapi: @new_record
     end
   end
 
   def show
     @info = Information.find_by(api_id: params['id'])
-    render json: @info
+    render jsonapi: @info
   end
 
 end

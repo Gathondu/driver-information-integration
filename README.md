@@ -57,3 +57,20 @@
   }
 }
 ```
+
+### Running this branch
+1. Create a .env file with the following variables
+```
+auth_token=<token>
+api_url=<url>
+
+DB_PASS=<database password>
+DB_USER=<database user>
+DB_PORT=<database port>
+DB_HOST=<database host>
+```
+
+2. Create the database by running the `rails db:create` commmand.
+3. Run migrations using the `rails db:migrate` commmand.
+4. Run `bundle install` to install dependencies specified by the GemFile.
+5. Running the server should now expose the api.

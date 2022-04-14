@@ -15,7 +15,7 @@ module DriverInformation
         req.headers['Content-Type'] = 'application/json'
         req.body = body
       end
-      raise 'Driver details not found' unless response.status == 200
+      raise DriverInformation::ErrorHandler::RequestError unless response.status == 201
       JSON.parse(response.body)['data']
     end
 

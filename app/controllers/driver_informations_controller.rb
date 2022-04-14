@@ -24,6 +24,12 @@ class DriverInformationsController < ApplicationController
       )
       render jsonapi: @new_record, status: :created
     end
+
+  rescue DriverInformation::ErrorHandler::CreationError => e
+    render json: error_response(e.message), status: :unauthorized
+
+  rescue DriverInformation::ErrorHandler::RequestError => e
+    render json: error_response(e.message), status: :unauthorized
   end
 
   def show
@@ -31,4 +37,15 @@ class DriverInformationsController < ApplicationController
     render jsonapi: @info
   end
 
+  private
+
+  def error_response(message)
+    {
+      errors:
+      [
+        { message: message }
+      ],
+      title: 'API Error'
+    }
+  end
 end

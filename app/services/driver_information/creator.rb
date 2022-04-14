@@ -21,7 +21,7 @@ module DriverInformation
         info.vehicles = @vehicles
       end
 
-      raise 'Error saving information' unless info.save!
+      raise CreationError unless info.save!
       info
     end
   end
